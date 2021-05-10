@@ -59,7 +59,7 @@ h1{
 	border-bottom-right-radius: 8px;
 	border-bottom-left-radius: 8px;
 }
-#register  input[type="text"], #register  input[type="password"], #register button[type="submit"]{
+#register  input[type="text"], #register  input[type="password"], #register .submit{
 	background: rgb(28, 30, 33);
 	box-shadow: inset -100px -100px 0 rgb(28, 30, 33); /*Prevent yellow autofill color*/
 	color: rgb(52, 56, 61);
@@ -78,25 +78,25 @@ h1{
 #register  input[type="text"]:focus, #register  input[type="password"]:focus{
 	color: rgb(255, 255, 255);
 }
-#register button[type="submit"]{
-	display: block;
-	position: absolute;
-	width: 52px;
-	height: 52px;
-	color: rgb(52, 56, 61);
-	border-radius: 50px;
-	outline: 0;
-	z-index: 2;
-	top: 19px;
-	right: -24px;
-	border: 6px solid rgb(52, 56, 61);
-	font-size: 25px;
-	text-indent: 0px;
-	padding-left: 9px;
-	padding-bottom: 3px;
-	text-align: center;
+#register .submit{
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 35px;
+  color: rgb(52, 56, 61);
+  border-radius: 100%;
+  outline: 0;
+  z-index: 2;
+  top: 19px;
+  right: -24px;
+  border: 6px solid rgb(52, 56, 61);
+  font-size: 25px;
+  text-indent: 0px;
+  padding-left: 6px;
+  padding-bottom: 1px;
+  text-align: center;
 }
-#register button[type="submit"]:hover{
+#register .submit:hover{
 	color: #ed5739;
 	text-shadow: 0 0 10px #ed5739;
 	cursor: pointer;
@@ -114,4 +114,23 @@ h1{
 }
 #register p > a:hover{
 	border-bottom: 1px solid;
+}
+
+#register-succesful{
+	position: absolute;
+	left: 50%;
+	margin-left: -200px;
+	top: 50%;
+	margin-top: -80px;
+	width: 370px;
+	height: 160px;
+	border: 1px solid #ed5739;
+	border-radius: 20px;
+}
+
+#register-succesful h1{
+	position: relative;
+	top: 35px;
+	color: #ed5739;
+	width: 100%;
 }

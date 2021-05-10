@@ -1,6 +1,5 @@
 import './App.css';
 import React, { useEffect } from 'react';
-import { db } from './firebase'
 import Header from './components/Header/Header'
 import Content from './components/Content/Content'
 import { connect } from 'react-redux'
