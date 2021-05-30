@@ -1,9 +1,11 @@
 import React from 'react';
 import './header.css';
 import { connect } from 'react-redux';
-import {toggleRegisterWindow} from './../toggleWindows'
+import {toggleRegisterWindow} from '../supFunctions/toggleWindows'
 
 const Header = (store) => {
+  const register = true;
+  const sighIn = false;
   return (
     <div>
       <div className="header">
@@ -11,8 +13,8 @@ const Header = (store) => {
         <div className="empty">
         </div>
         <div className="reg-sign">
-          <div  className="registration" onClick={toggleRegisterWindow}>Registration</div>
-          <div className="sign-in">Sign-in</div>
+          <div  className="registration" onClick={() => {toggleRegisterWindow(register)}}>Registration</div>
+          <div className="sign-in" onClick={() => {toggleRegisterWindow(sighIn)}}>{store.loginName}</div>
         </div>
       </div>
     </div>
@@ -20,5 +22,5 @@ const Header = (store) => {
 }
 
 export default connect(
-  (store) => (store)
+  (store) => (store.setLoginNameReducer)
 )(Header);

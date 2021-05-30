@@ -18,7 +18,7 @@ h1{
 	width: 200px;
 	text-align: center;
 }
-#wrapper-register{
+#wrapper-sign-in{
 	position: absolute;
 	width: 320px;
 	left: 50%;
@@ -27,26 +27,26 @@ h1{
 	margin-top: -75px;
 }
 
-#wrapper-register a {
+#wrapper-sign-in a {
   text-decoration: none;
   cursor: pointer;
   font-size: 24px;
   color: #ed5739;
 }
 
-#wrapper-register a:hover {
+#wrapper-sign-in a:hover {
 	color:#ff2a00;
 	font-weight: bold;
 }
 
 /* === Sign in Form === */
-#register {
+#sign-in {
 	height: 90px;
 	width: 300px;
 	border-radius: 8px;
 	position: relative;
 }
-#register::before {
+#sign-in::before {
 	display: block;
 	position: relative;
 	height: 2px;
@@ -56,20 +56,20 @@ h1{
 	margin-left: 20px;
 	z-index: 1;
 }
-#register input:first-of-type{
+#sign-in input:first-of-type{
 	border-top-right-radius: 8px;
 	border-top-left-radius: 8px;
 }
-#register input:last-of-type{
+#sign-in input:last-of-type{
 	border-bottom-right-radius: 8px;
 	border-bottom-left-radius: 8px;
 }
-#register  input[type="text"], #register  input[type="password"], #register .submit{
+#sign-in  input[type="text"], #sign-in  input[type="password"], #sign-in .submit{
 	background: rgb(28, 30, 33);
 	box-shadow: inset -100px -100px 0 rgb(28, 30, 33); /*Prevent yellow autofill color*/
 	color: rgb(52, 56, 61);
 }
-#register  input[type="text"], #register  input[type="password"]{
+#sign-in  input[type="text"], #sign-in  input[type="password"]{
 	position: relative;
 	display: block;
 	width: 280px;
@@ -80,10 +80,10 @@ h1{
 	padding: 0 0 0 20px;
 	font-weight: 700;
 }
-#register  input[type="text"]:focus, #register  input[type="password"]:focus{
+#sign-in  input[type="text"]:focus, #sign-in  input[type="password"]:focus{
 	color: rgb(255, 255, 255);
 }
-#register .submit{
+#sign-in .submit{
   display: block;
   position: absolute;
   width: 30px;
@@ -101,27 +101,27 @@ h1{
   padding-bottom: 1px;
   text-align: center;
 }
-#register .submit:hover{
+#sign-in .submit:hover{
 	color: #ed5739;
 	text-shadow: 0 0 10px #ed5739;
 	cursor: pointer;
 }
-#register p {
+#sign-in p {
 	color: rgb(79, 85, 97);
 	padding: 0 20px;
 	font-weight: 700;
 	font-size: 12px;
 	margin: 5px 0 0 0;
 }
-#register p > a{
+#sign-in p > a{
 	color: rgb(111, 119, 135);
 	text-decoration: none;
 }
-#register p > a:hover{
+#sign-in p > a:hover{
 	border-bottom: 1px solid;
 }
 
-#register-succesful{
+#sign-in-succesful{
 	position: absolute;
 	left: 50%;
 	margin-left: -200px;
@@ -133,9 +133,16 @@ h1{
 	border-radius: 20px;
 }
 
-#register-succesful h1{
+#sign-in-succesful h1{
 	position: relative;
 	top: 35px;
 	color: #ed5739;
 	width: 100%;
+}
+
+#wrong-message{
+	color: #ed5739;
+	text-align: center;
+	position: relative;
+	left: -8px;
 }

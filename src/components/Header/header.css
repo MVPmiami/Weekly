@@ -24,6 +24,7 @@
   font-size: 32px;
   text-align: center;
   grid-area: logo;
+  cursor: pointer;
 }
 
 .reg-sign{
@@ -31,6 +32,7 @@
   grid-template-columns: 50% 50%;
   width: 100%;
   grid-area: reg-sign;
+  cursor: pointer;
 }
 
 .registration{
@@ -44,11 +46,19 @@
   cursor: pointer;
 }
 
+.registration:hover{
+  text-shadow: 0 0 10px #ed5739;
+}
+
 .sign-in {
   color: #ff6e51;
   font-size: 30px;
   width: 100%;
   text-align: center;
+}
+
+.sign-in:hover{
+  text-shadow: 0 0 10px #ed5739;
 }
 
 @media (max-width: 1500px) {

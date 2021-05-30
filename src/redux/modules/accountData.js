@@ -1,6 +1,5 @@
 export const SET_ACCOUNT_DATA = 'SET_ACCOUNT_DATA';
 
-
 const defaultState = {
   userName: '',
   password:''
