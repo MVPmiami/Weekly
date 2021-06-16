@@ -10,6 +10,11 @@ function checkData(userName, password, store){
             if(userName == doc.data().userName && password == doc.data().password){
                 store.dispatch({type: 'SET_ACCOUNT_DATA', userName: userName, password: password});
                 store.dispatch({type: 'SET_LOGIN_NAME', loginName:userName});
+                store.dispatch({type: 'SET_TASKS', tasks: doc.data().tasks});
+                const signInWindow = document.getElementById('wrapper-sign-in');
+                signInWindow.classList.toggle('hidden')
+                const card = document.querySelector('.card-wrapp');
+                card.classList.toggle('hidden')
             if(!errorMessage.classList.contains('hidden')){
             errorMessage.classList.add('hidden');
             }

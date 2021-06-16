@@ -3,6 +3,7 @@ import './content.css';
 import Register from './../Register/Register'
 import SignIn from './../Sign-in/Sign-in'
 import RegisterSuccesful from './../Register/RegisterSuccessful'
+import Card from './Card'
 
 const Content = () => {
   return (
@@ -11,6 +12,7 @@ const Content = () => {
           <Register></Register>
           <SignIn></SignIn>
           <RegisterSuccesful></RegisterSuccesful>
+          <Card></Card>
       </div>
     </div>
   )

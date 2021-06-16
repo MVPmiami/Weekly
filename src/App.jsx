@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect } from 'react';
+import React from 'react';
 import Header from './components/Header/Header'
 import Content from './components/Content/Content'
 import { connect } from 'react-redux'

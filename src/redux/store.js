@@ -4,7 +4,7 @@ import reducer from './modules/index'
 
 let store = createStore(reducer, applyMiddleware(thunk));
 
-store.subscribe(() => console.log(store.getState()))
-console.log(store.getState())
+/*store.subscribe(() => console.log(store.getState()))
+console.log(store.getState())*/
 
 export default store;
