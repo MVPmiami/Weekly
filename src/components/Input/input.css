@@ -1,6 +1,5 @@
 .input{
-  width: 80%;
-  border: 2px dashed #ed5739;
+  width: 79%;
   border-radius: 0px 0px 0px 15px;
   -webkit-border-radius: 0px 0px 0px 15px;
   -moz-border-radius: 0px 0px 0px 15px;
@@ -11,10 +10,15 @@
   font-size: 28px; 
   font-family: Tahoma;
   transition: 0.5s;
+  border: none;
+  box-shadow: 0px 0px 10px #ed5739;
 }
 
 .input:focus {
   color: #000000;
-  background: #9c6149 !important;
-  border: 3px solid #34383d
+  background: #a66e62 !important;
+  border: 2px solid #34383d;
+  box-shadow: none;
 }
+
+/*border: 2px dashed #ed5739;*/
