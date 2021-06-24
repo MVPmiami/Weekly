@@ -4,7 +4,7 @@ const addAccountDataToDataBase = (userName, password) => {
   db.collection("users").add({
       userName: userName,
       password: password,
-      tasks: [{id:1, title: 'test1', done:false},{id:2, title: 'test2', done:false},{id:3, title: 'test3', done:false}]
+      tasks: []
   })
   .then((docRef) => {
       console.log("Document written with ID: ", docRef.id);
@@ -15,3 +15,5 @@ const addAccountDataToDataBase = (userName, password) => {
 }
 
 export {addAccountDataToDataBase}
+
+//{id:1, title: 'test1', done:false},{id:2, title: 'test2', done:false},{id:3, title: 'test3', done:false}

@@ -45,11 +45,35 @@ const Task = (props) => {
 
   }
 
+  const deleteTask = () => {
+    store.dispatch({type: 'DELETE_TASK', value: {id: props.task.id}});
+
+    db.collection("users").where("userName", "==", `${loginName}`)
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          let updateUser = db.collection("users").doc(doc.id);
+          return updateUser.update({
+            tasks: firebase.firestore.FieldValue.arrayRemove({id: id, title: title, done: done})
+          })
+          .then(() => {
+            console.log("Document successfully updated!");
+          })
+          .catch((error) => {
+              console.error("Error updating document: ", error);
+          });
+        });
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+  }
+
   return (
     <div className={classNameForTaskWrapper}>
       <h1 className={classNameForTaskText}>{props.task.title}</h1>
       <div className={classNameforDoneBtn} onClick={completeTask}>Done</div>
-      <div className={classNameforDeleteBtn}>Delete</div>
+      <div className={classNameforDeleteBtn} onClick={deleteTask}>Delete</div>
     </div>
   )
 }

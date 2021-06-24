@@ -2,9 +2,42 @@ import React from 'react';
 import './card.css';
 import Task from './../Task/Task'
 import { connect } from 'react-redux';
-// сделать удаление из карточки тасков и загрузкой изменений на бд
+import Input from './../Input/inputNewTask';
+import { db } from './../../firebase';
+import firebase from 'firebase';
+
 const Card = (store) => {
   const { tasks } = store.setTasksDataReducer;
+  const { loginName } = store.setLoginNameReducer;
+
+  const addTask = () => {
+    let inputText = document.querySelector('.input').value
+
+    let id = Math.random();
+
+    store.dispatch({type: 'ADD_TASK', value: {id:id, title: `${inputText}`, done:false}});
+
+    db.collection("users").where("userName", "==", `${loginName}`)
+    .get()
+    .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          let updateUser = db.collection("users").doc(doc.id);
+          return updateUser.update({
+            tasks: firebase.firestore.FieldValue.arrayUnion({id: id, title: `${inputText}`, done: false})
+          })
+          .then( () => {
+            document.querySelector('.input').value = ''
+          } )
+          .catch((error) => {
+              console.error("Error updating document: ", error);
+          });
+        });
+    })
+    .catch((error) => {
+        console.log("Error getting documents: ", error);
+    });
+  }
+
   return (
     <div>
       <div className='card-wrapp hidden'>
@@ -13,7 +46,10 @@ const Card = (store) => {
             <Task task={task} key={task.id} loginName={store.setLoginNameReducer.loginName}></Task>
           ))}
         </div>
-        <div className="btn-add">ADD</div>
+        <div className="bottom-interface">
+          <Input></Input>
+          <div className="btn-add" onClick={addTask}>ADD</div>
+        </div>
       </div>
     </div>
   )

@@ -1,0 +1,20 @@
+.input{
+  width: 80%;
+  border: 2px dashed #ed5739;
+  border-radius: 0px 0px 0px 15px;
+  -webkit-border-radius: 0px 0px 0px 15px;
+  -moz-border-radius: 0px 0px 0px 15px;
+  -khtml-border-radius: 0px 0px 0px 15px;
+  background: #34383d !important;
+  outline: none;
+  color: aliceblue;
+  font-size: 28px; 
+  font-family: Tahoma;
+  transition: 0.5s;
+}
+
+.input:focus {
+  color: #000000;
+  background: #9c6149 !important;
+  border: 3px solid #34383d
+}
