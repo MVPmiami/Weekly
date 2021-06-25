@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Input from './../Input/inputNewTask';
 import { db } from './../../firebase';
 import firebase from 'firebase';
+import {checkWorkLoad} from './../supFunctions/checkWorkLoad';
 
 const Card = (store) => {
   const { tasks } = store.setTasksDataReducer;
@@ -26,7 +27,8 @@ const Card = (store) => {
             tasks: firebase.firestore.FieldValue.arrayUnion({id: id, title: `${inputText}`, done: false})
           })
           .then( () => {
-            document.querySelector('.input').value = ''
+            document.querySelector('.input').value = '';
+            checkWorkLoad('ADD', tasks.length);
           } )
           .catch((error) => {
               console.error("Error updating document: ", error);

@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import store from '../../redux/store';
 import { db } from './../../firebase';
 import firebase from 'firebase';
+import {checkWorkLoad} from './../supFunctions/checkWorkLoad';
 
 
 const Task = (props) => {
@@ -57,7 +58,7 @@ const Task = (props) => {
             tasks: firebase.firestore.FieldValue.arrayRemove({id: id, title: title, done: done})
           })
           .then(() => {
-            console.log("Document successfully updated!");
+            checkWorkLoad("DELETE", doc.data().tasks.length);
           })
           .catch((error) => {
               console.error("Error updating document: ", error);

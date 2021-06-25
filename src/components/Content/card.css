@@ -19,6 +19,12 @@
   flex-flow: column;
 }
 
+.card-scroll{
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #000000 #808080;
+}
+
 .bottom-interface{
   width: 100%;
   height: 10%;
@@ -52,6 +58,18 @@
 
 .hidden {
   display: none;
+}
+
+.easy-workload-color{
+  box-shadow: 0px 0px 30px 10px rgb(135, 209, 101);
+}
+
+.medium-workload-color{
+  box-shadow: 0px 0px 30px 10px rgb(209, 202, 101);
+}
+
+.hard-workload-color{
+  box-shadow: 0px 0px 30px 10px rgb(226, 84, 48);
 }
 
 @media (max-width: 600px) {

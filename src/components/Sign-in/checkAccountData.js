@@ -1,4 +1,5 @@
 import { db } from './../../firebase';
+import {checkWorkLoad} from './../supFunctions/checkWorkLoad'
 
 function checkData(userName, password, store){
   const errorMessage = document.getElementById('wrong-message');
@@ -11,6 +12,7 @@ function checkData(userName, password, store){
                 store.dispatch({type: 'SET_ACCOUNT_DATA', userName: userName, password: password});
                 store.dispatch({type: 'SET_LOGIN_NAME', loginName:userName});
                 store.dispatch({type: 'SET_TASKS', tasks: doc.data().tasks});
+                checkWorkLoad("LOAD", doc.data().tasks.length)
                 const signInWindow = document.getElementById('wrapper-sign-in');
                 signInWindow.classList.toggle('hidden')
                 const card = document.querySelector('.card-wrapp');

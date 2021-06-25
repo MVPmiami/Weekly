@@ -30,7 +30,7 @@
 .reg-sign{
   display: grid;
   grid-template-columns: 50% 50%;
-  width: 100%;
+  width: 300px;
   grid-area: reg-sign;
   cursor: pointer;
 }
@@ -38,9 +38,8 @@
 .registration{
   border-right: 2px solid #ed5739;
   color: #ed5739;
-  font-size: 30px;
-  padding-right: 20px;
-  width: 100%;
+  font-size: 28px;
+  width: 143px;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -52,8 +51,9 @@
 
 .sign-in {
   color: #ff6e51;
-  font-size: 30px;
-  width: 100%;
+  font-size: 28px;
+  width: 140px;
+  margin-left: 10px;
   text-align: center;
 }
 
@@ -88,11 +88,17 @@
     font-size: 30px;
   }
 
+  .reg-sign{
+    width: 200px;
+  }
+
   .registration {
-    font-size: 24px;
+    font-size: 18px;
+    width: 100px;
   }
   
   .sign-in {
-    font-size: 24px;
+    font-size: 18px;
+    width: 100px;
   }
 }
