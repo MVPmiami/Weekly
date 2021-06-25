@@ -13,15 +13,16 @@
 
 ::-webkit-scrollbar {
   background: #808080;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: #34383d;
   -webkit-border-radius: 1px;
 }
 
 ::-webkit-scrollbar-corner {
-  background: #000000;
+  background: #34383d;
 }
 
 .card-content{
@@ -35,7 +36,7 @@
 .card-scroll{
   overflow-y: scroll;
   scrollbar-width: thin;
-  scrollbar-color: #000000 #808080;
+  scrollbar-color: #34383d #808080;
 }
 
 .bottom-interface{
