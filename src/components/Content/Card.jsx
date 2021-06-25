@@ -7,7 +7,7 @@ import { db } from './../../firebase';
 import firebase from 'firebase';
 import {checkWorkLoad} from './../supFunctions/checkWorkLoad';
 
-const Card = (store) => {
+ const Card = (store) => {
   const { tasks } = store.setTasksDataReducer;
   const { loginName } = store.setLoginNameReducer;
 
@@ -49,8 +49,8 @@ const Card = (store) => {
           ))}
         </div>
         <div className="bottom-interface">
-          <Input></Input>
-          <div className="btn-add" onClick={addTask}>ADD</div>
+          <Input addTask={addTask}></Input>
+          <div className="btn-add" onClick={addTask} >ADD</div>
         </div>
       </div>
     </div>
