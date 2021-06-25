@@ -12,8 +12,9 @@
 }
 
 ::-webkit-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #000000 #808080;
+  width: thin;
+  color: #000000;
+  background-color: #808080;
 }
 
 .card-content{
