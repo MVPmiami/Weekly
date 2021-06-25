@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Weekly/static/css/main.29b98e5d.chunk.css",
+    "main.css": "/Weekly/static/css/main.a920fc47.chunk.css",
     "main.js": "/Weekly/static/js/main.9621d3eb.chunk.js",
     "main.js.map": "/Weekly/static/js/main.9621d3eb.chunk.js.map",
     "runtime-main.js": "/Weekly/static/js/runtime-main.8236b577.js",
@@ -8,13 +8,13 @@
     "static/js/2.75a9a86e.chunk.js": "/Weekly/static/js/2.75a9a86e.chunk.js",
     "static/js/2.75a9a86e.chunk.js.map": "/Weekly/static/js/2.75a9a86e.chunk.js.map",
     "index.html": "/Weekly/index.html",
-    "static/css/main.29b98e5d.chunk.css.map": "/Weekly/static/css/main.29b98e5d.chunk.css.map",
+    "static/css/main.a920fc47.chunk.css.map": "/Weekly/static/css/main.a920fc47.chunk.css.map",
     "static/js/2.75a9a86e.chunk.js.LICENSE.txt": "/Weekly/static/js/2.75a9a86e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8236b577.js",
     "static/js/2.75a9a86e.chunk.js",
-    "static/css/main.29b98e5d.chunk.css",
+    "static/css/main.a920fc47.chunk.css",
     "static/js/main.9621d3eb.chunk.js"
   ]
 }
