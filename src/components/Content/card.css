@@ -12,9 +12,16 @@
 }
 
 ::-webkit-scrollbar {
-  width: thin;
-  color: #000000;
-  background-color: #808080;
+  background: #808080;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  -webkit-border-radius: 1px;
+}
+
+::-webkit-scrollbar-corner {
+  background: #000000;
 }
 
 .card-content{
